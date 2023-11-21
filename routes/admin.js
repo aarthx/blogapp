@@ -56,7 +56,7 @@ router.post('/categorias/nova', eAdmin, (req, res) => {
       res.redirect("/admin/categorias")
     }).catch((err) => {
       req.flash("error_msg", "Houve um erro ao salvar a categoria tente novamente")
-      res.redirect("/admin")
+      res.redirect("/admin/categorias")
     })
   }
 })

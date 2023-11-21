@@ -63,7 +63,7 @@ router.post("/registro", (req, res) => {
                 req.flash("success_msg", "Usuário criado com sucesso")
                 res.redirect("/")
               }).catch((err) => {
-                req.flash("error_msg", "Houve um erro ao criar um usuário")
+                req.flash("error_msg", "Houve um erro ao criar um usuário: " + err)
                 res.redirect("/")
               })
             }
