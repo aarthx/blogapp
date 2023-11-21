@@ -52,6 +52,7 @@
     })
   //Public (Arquivos estáticos)
     app.use(express.static(path.join(__dirname, "public")))
+    app.set('views', path.join(__dirname, 'views'));
 //Rotas
   app.get('/', (req, res) => {
     Postagem.find().lean().populate("categoria").sort({data: "desc"}).then((postagens) => {
