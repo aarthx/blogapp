@@ -45,7 +45,7 @@
     app.set('view engine', 'handlebars')
   //Mongoose
     mongoose.Promise = global.Promise
-    mongoose.connect(db.mongoURI).then(() => {
+    mongoose.connect(process.env.MONGODB_URI).then(() => {
       console.log("MongoDB conectado...")
     }).catch((err) => {
       console.log("Erro ao se conectar " + err)
